@@ -2,26 +2,53 @@ import React from 'react';
 import { Mail, Phone, MapPin } from 'lucide-react';
 
 const ContactInfo = () => {
+  const contactInfo = [
+    {
+      icon: <Mail className="h-5 w-5" />,
+      title: "Email",
+      content: "contact@sahimgroup.com"
+    },
+    {
+      icon: <Phone className="h-5 w-5" />,
+      title: "Téléphone",
+      content: "+221 77 777 77 77"
+    },
+    {
+      icon: <MapPin className="h-5 w-5" />,
+      title: "Adresse",
+      content: "Dakar, Sénégal"
+    }
+  ];
+
   return (
-    <div id="contact" className="mt-16">
-      <h2 className="text-3xl font-bold text-white text-center mb-12">Contactez-nous</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div className="flex flex-col items-center p-6 bg-gray-800 rounded-lg">
-          <Mail className="h-6 w-6 text-blue-400" />
-          <h3 className="mt-4 text-lg font-medium text-white">Email</h3>
-          <p className="mt-2 text-gray-300">contact@sahimgroup.com</p>
-        </div>
-
-        <div className="flex flex-col items-center p-6 bg-gray-800 rounded-lg">
-          <Phone className="h-6 w-6 text-blue-400" />
-          <h3 className="mt-4 text-lg font-medium text-white">Téléphone</h3>
-          <p className="mt-2 text-gray-300">+221 XX XXX XX XX</p>
-        </div>
-
-        <div className="flex flex-col items-center p-6 bg-gray-800 rounded-lg">
-          <MapPin className="h-6 w-6 text-blue-400" />
-          <h3 className="mt-4 text-lg font-medium text-white">Adresse</h3>
-          <p className="mt-2 text-gray-300 text-center">Dakar, Sénégal</p>
+    <div className="mt-16">
+      <h3 className="text-lg font-semibold text-white mb-6">Contact</h3>
+      <div className="space-y-4">
+        {contactInfo.map((info, index) => (
+          <div key={index} className="flex items-center space-x-3">
+            <div className="p-2 bg-[#641f45] rounded-lg">
+              {React.cloneElement(info.icon, { className: "h-5 w-5 text-white" })}
+            </div>
+            <div>
+              <p className="text-gray-300">{info.title}</p>
+              <p className="text-white">{info.content}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+      
+      <div className="mt-8">
+        <h3 className="text-lg font-semibold text-white mb-4">Suivez-nous</h3>
+        <div className="flex space-x-4">
+          {['LinkedIn', 'Twitter', 'Instagram'].map((social, index) => (
+            <a
+              key={index}
+              href="#"
+              className="p-2 bg-[#641f45] rounded-lg text-white hover:opacity-80 transition-colors duration-200"
+            >
+              {social}
+            </a>
+          ))}
         </div>
       </div>
     </div>

@@ -13,7 +13,7 @@ const AppMobile = () => {
       <div className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-3xl font-extrabold sm:text-4xl bg-gradient-to-r from-[#641f45] to-[#8a2b5f] bg-clip-text text-transparent">
+            <h2 className="text-3xl font-extrabold sm:text-4xl bg-gradient-to-r from-[#82368C] to-[#82368C] bg-clip-text text-transparent">
               Plateforme de Gestion des Auto-Écoles
             </h2>
             <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
@@ -29,7 +29,7 @@ const AppMobile = () => {
                 transition={{ duration: 0.8 }}
                 className="space-y-6"
               >
-                <div className="inline-flex items-center justify-center p-3 bg-gradient-to-r from-[#641f45] to-[#8a2b5f] rounded-xl shadow-lg">
+                <div className="inline-flex items-center justify-center p-3 bg-gradient-to-r from-[#82368C] to-[#82368C] rounded-xl shadow-lg">
                   <Building2 className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900">
@@ -47,7 +47,7 @@ const AppMobile = () => {
                     "Interface intuitive et moderne"
                   ].map((feature, index) => (
                     <li key={index} className="flex items-center space-x-3">
-                      <div className="h-2 w-2 rounded-full bg-gradient-to-r from-[#641f45] to-[#8a2b5f]" />
+                      <div className="h-2 w-2 rounded-full bg-gradient-to-r from-[#82368C] to-[#82368C]" />
                       <span className="text-gray-600">{feature}</span>
                     </li>
                   ))}
@@ -56,7 +56,7 @@ const AppMobile = () => {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-xl shadow-sm text-white bg-gradient-to-r from-[#641f45] to-[#8a2b5f] hover:shadow-lg transition-all duration-200"
+                    className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-xl shadow-sm text-white bg-gradient-to-r from-[#82368C] to-[#82368C] hover:shadow-lg transition-all duration-200"
                   >
                     Demander une démo
                   </motion.button>
@@ -69,7 +69,7 @@ const AppMobile = () => {
                 transition={{ duration: 0.8 }}
                 className="relative mt-8 lg:mt-0"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-[#641f45] to-[#8a2b5f] rounded-3xl transform rotate-6"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-[#82368C] to-[#82368C] rounded-3xl transform rotate-6"></div>
                 <img
                   src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
                   alt="Interface de la plateforme de gestion"
@@ -85,7 +85,7 @@ const AppMobile = () => {
       <div className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-3xl font-extrabold sm:text-4xl bg-gradient-to-r from-[#641f45] to-[#8a2b5f] bg-clip-text text-transparent">
+            <h2 className="text-3xl font-extrabold sm:text-4xl bg-gradient-to-r from-[#82368C] to-[#82368C] bg-clip-text text-transparent">
               Application Mobile Teggunou Yoon
             </h2>
             <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
@@ -101,7 +101,7 @@ const AppMobile = () => {
                 transition={{ duration: 0.8 }}
                 className="space-y-6"
               >
-                <div className="inline-flex items-center justify-center p-3 bg-gradient-to-r from-[#641f45] to-[#8a2b5f] rounded-xl shadow-lg">
+                <div className="inline-flex items-center justify-center p-3 bg-gradient-to-r from-[#82368C] to-[#82368C] rounded-xl shadow-lg">
                   <Smartphone className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900">
@@ -118,7 +118,7 @@ const AppMobile = () => {
                     "Tests et examens blancs"
                   ].map((feature, index) => (
                     <li key={index} className="flex items-center space-x-3">
-                      <div className="h-2 w-2 rounded-full bg-gradient-to-r from-[#641f45] to-[#8a2b5f]" />
+                      <div className="h-2 w-2 rounded-full bg-gradient-to-r from-[#82368C] to-[#82368C]" />
                       <span className="text-gray-600">{feature}</span>
                     </li>
                   ))}
@@ -127,7 +127,7 @@ const AppMobile = () => {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-xl shadow-sm text-white bg-gradient-to-r from-[#641f45] to-[#8a2b5f] hover:shadow-lg transition-all duration-200"
+                    className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-xl shadow-sm text-white bg-gradient-to-r from-[#82368C] to-[#82368C] hover:shadow-lg transition-all duration-200"
                   >
                     Télécharger l'app
                   </motion.button>
@@ -140,7 +140,7 @@ const AppMobile = () => {
                 transition={{ duration: 0.8 }}
                 className="relative mt-8 lg:mt-0"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-[#641f45] to-[#8a2b5f] rounded-3xl transform rotate-6"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-[#82368C] to-[#82368C] rounded-3xl transform rotate-6"></div>
                 <img
                   src=""
                   alt="Interface mobile Teggunou Yoon"

@@ -13,7 +13,7 @@ const About = () => {
         "Développer des solutions adaptées localement",
         "Faciliter l'accès à la technologie"
       ],
-      color: "from-[#641f45] to-[#8a2b5f]",
+      color: "from-[#82368C] to-[#82368C]",
       delay: 0.2
     },
     {
@@ -25,7 +25,7 @@ const About = () => {
         "Engagement communautaire",
         "Intégrité et transparence"
       ],
-      color: "from-[#8a2b5f] to-[#641f45]",
+      color: "from-[#82368C] to-[#82368C]",
       delay: 0.4
     },
     {
@@ -37,7 +37,7 @@ const About = () => {
         "Créateur de solutions durables",
         "Partenaire de croissance"
       ],
-      color: "from-[#641f45] to-[#8a2b5f]",
+      color: "from-[#82368C] to-[#82368C]",
       delay: 0.6
     }
   ];
@@ -48,8 +48,8 @@ const About = () => {
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-[0.1]"></div>
         {/* Cercles décoratifs */}
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-[#641f45]/10 rounded-full filter blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-[#8a2b5f]/10 rounded-full filter blur-3xl"></div>
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-[#82368C]/10 rounded-full filter blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-[#82368C]/10 rounded-full filter blur-3xl"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -63,7 +63,7 @@ const About = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl font-bold bg-gradient-to-r from-[#641f45] to-[#8a2b5f] bg-clip-text text-transparent mb-6"
+            className="text-4xl font-bold bg-gradient-to-r from-[#82368C] to-[#82368C] bg-clip-text text-transparent mb-6"
           >
             L'Innovation Technologique au Service du Changement Social
           </motion.h2>
@@ -88,7 +88,7 @@ const About = () => {
               whileHover={{ y: -8, scale: 1.02 }}
               className="relative group"
             >
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-[#641f45]/20 to-[#8a2b5f]/20 rounded-2xl blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-[#82368C]/20 to-[#82368C]/20 rounded-2xl blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
               <div className="relative h-full bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className={`inline-flex items-center justify-center p-3 bg-gradient-to-r ${card.color} rounded-xl shadow-lg`}>
                   {card.icon}
@@ -105,7 +105,7 @@ const About = () => {
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.5, delay: i * 0.1 + card.delay }}
                     >
-                      <Star className="h-4 w-4 text-[#641f45] mt-1 flex-shrink-0" />
+                      <Star className="h-4 w-4 text-[#82368C] mt-1 flex-shrink-0" />
                       <p className="text-gray-600">
                         {item}
                       </p>

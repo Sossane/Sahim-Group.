@@ -58,7 +58,7 @@ const Team = () => {
     <div id="team" className="py-24 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-4xl font-bold bg-gradient-to-r from-[#641f45] to-[#8a2b5f] bg-clip-text text-transparent">
+          <h2 className="text-4xl font-bold bg-gradient-to-r from-[#82368C] to-[#8a2b5f] bg-clip-text text-transparent">
             Notre Équipe
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-600">
@@ -78,7 +78,7 @@ const Team = () => {
                 transition={{ duration: 0.5, delay: index * 0.2 }}
               >
                 <div className="relative overflow-hidden rounded-xl bg-white shadow-lg p-6 transition-all duration-300 hover:shadow-xl">
-                  <div className="w-32 h-32 mx-auto rounded-full overflow-hidden ring-4 ring-[#641f45]/20">
+                  <div className="w-32 h-32 mx-auto rounded-full overflow-hidden ring-4 ring-[#82368C]/20">
                     <img
                       src={member.image}
                       alt={member.name}
@@ -87,17 +87,17 @@ const Team = () => {
                   </div>
                   <div className="mt-4 text-center">
                     <h3 className="text-lg font-medium text-gray-900">{member.name}</h3>
-                    <p className="text-sm text-[#641f45] font-medium">{member.role}</p>
+                    <p className="text-sm text-[#82368C] font-medium">{member.role}</p>
                   </div>
                   
                   {/* Compétences avec animation fluide */}
                   <div className="mt-4">
-                    <p className="text-sm font-medium text-[#641f45] mb-2">Compétences</p>
+                    <p className="text-sm font-medium text-[#82368C] mb-2">Compétences</p>
                     <div className="flex flex-wrap gap-2">
                       {member.skills.map((skill, skillIndex) => (
                         <span
                           key={skillIndex}
-                          className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-[#641f45]/5 text-[#641f45]"
+                          className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-[#82368C]/5 text-[#82368C]"
                         >
                           {skill}
                         </span>
@@ -120,7 +120,7 @@ const Team = () => {
                 transition={{ duration: 0.5, delay: (index + 3) * 0.2 }}
               >
                 <div className="relative overflow-hidden rounded-xl bg-white shadow-lg p-6 transition-all duration-300 hover:shadow-xl">
-                  <div className="w-32 h-32 mx-auto rounded-full overflow-hidden ring-4 ring-[#641f45]/20">
+                  <div className="w-32 h-32 mx-auto rounded-full overflow-hidden ring-4 ring-[#82368C]/20">
                     <img
                       src={member.image}
                       alt={member.name}
@@ -129,17 +129,17 @@ const Team = () => {
                   </div>
                   <div className="mt-4 text-center">
                     <h3 className="text-lg font-medium text-gray-900">{member.name}</h3>
-                    <p className="text-sm text-[#641f45] font-medium">{member.role}</p>
+                    <p className="text-sm text-[#82368C] font-medium">{member.role}</p>
                   </div>
                   
                   {/* Compétences avec animation fluide */}
                   <div className="mt-4">
-                    <p className="text-sm font-medium text-[#641f45] mb-2">Compétences</p>
+                    <p className="text-sm font-medium text-[#82368C] mb-2">Compétences</p>
                     <div className="flex flex-wrap gap-2">
                       {member.skills.map((skill, skillIndex) => (
                         <span
                           key={skillIndex}
-                          className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-[#641f45]/5 text-[#641f45]"
+                          className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-[#82368C]/5 text-[#82368C]"
                         >
                           {skill}
                         </span>
