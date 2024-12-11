@@ -1,6 +1,5 @@
-import React from 'react';
-import { Users } from 'lucide-react';
 import { motion } from 'framer-motion';
+import React from 'react';
 
 const Team = () => {
   const teamMembers = [
@@ -73,40 +72,38 @@ const Team = () => {
             {teamMembers.slice(0, 3).map((member, index) => (
               <motion.div 
                 key={index} 
-                className="text-center group"
+                className="relative group"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
-                whileHover={{ y: -5 }}
               >
-                <div className="relative">
-                  <div className="w-40 h-40 mx-auto rounded-full overflow-hidden ring-4 ring-[#641f45]/20">
+                <div className="relative overflow-hidden rounded-xl bg-white shadow-lg p-6 transition-all duration-300 hover:shadow-xl">
+                  <div className="w-32 h-32 mx-auto rounded-full overflow-hidden ring-4 ring-[#641f45]/20">
                     <img
                       src={member.image}
                       alt={member.name}
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  {/* Popup des compétences */}
-                  <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-full max-w-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="bg-white rounded-xl shadow-lg p-4 mx-4 ring-1 ring-[#641f45]/10">
-                      <div className="text-sm font-medium text-[#641f45] mb-2">Compétences</div>
-                      <div className="flex flex-wrap gap-2">
-                        {member.skills.map((skill, skillIndex) => (
-                          <span
-                            key={skillIndex}
-                            className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gradient-to-r from-[#641f45]/10 to-[#8a2b5f]/10 text-[#641f45]"
-                          >
-                            {skill}
-                          </span>
-                        ))}
-                      </div>
+                  <div className="mt-4 text-center">
+                    <h3 className="text-lg font-medium text-gray-900">{member.name}</h3>
+                    <p className="text-sm text-[#641f45] font-medium">{member.role}</p>
+                  </div>
+                  
+                  {/* Compétences avec animation fluide */}
+                  <div className="mt-4">
+                    <p className="text-sm font-medium text-[#641f45] mb-2">Compétences</p>
+                    <div className="flex flex-wrap gap-2">
+                      {member.skills.map((skill, skillIndex) => (
+                        <span
+                          key={skillIndex}
+                          className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-[#641f45]/5 text-[#641f45]"
+                        >
+                          {skill}
+                        </span>
+                      ))}
                     </div>
                   </div>
-                </div>
-                <div className="mt-6">
-                  <h3 className="text-lg font-medium text-gray-900">{member.name}</h3>
-                  <p className="text-sm text-[#641f45]">{member.role}</p>
                 </div>
               </motion.div>
             ))}
@@ -117,40 +114,38 @@ const Team = () => {
             {teamMembers.slice(3).map((member, index) => (
               <motion.div 
                 key={index} 
-                className="text-center group"
+                className="relative group"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: (index + 3) * 0.2 }}
-                whileHover={{ y: -5 }}
               >
-                <div className="relative">
-                  <div className="w-40 h-40 mx-auto rounded-full overflow-hidden ring-4 ring-[#641f45]/20">
+                <div className="relative overflow-hidden rounded-xl bg-white shadow-lg p-6 transition-all duration-300 hover:shadow-xl">
+                  <div className="w-32 h-32 mx-auto rounded-full overflow-hidden ring-4 ring-[#641f45]/20">
                     <img
                       src={member.image}
                       alt={member.name}
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  {/* Popup des compétences */}
-                  <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-full max-w-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="bg-white rounded-xl shadow-lg p-4 mx-4 ring-1 ring-[#641f45]/10">
-                      <div className="text-sm font-medium text-[#641f45] mb-2">Compétences</div>
-                      <div className="flex flex-wrap gap-2">
-                        {member.skills.map((skill, skillIndex) => (
-                          <span
-                            key={skillIndex}
-                            className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gradient-to-r from-[#641f45]/10 to-[#8a2b5f]/10 text-[#641f45]"
-                          >
-                            {skill}
-                          </span>
-                        ))}
-                      </div>
+                  <div className="mt-4 text-center">
+                    <h3 className="text-lg font-medium text-gray-900">{member.name}</h3>
+                    <p className="text-sm text-[#641f45] font-medium">{member.role}</p>
+                  </div>
+                  
+                  {/* Compétences avec animation fluide */}
+                  <div className="mt-4">
+                    <p className="text-sm font-medium text-[#641f45] mb-2">Compétences</p>
+                    <div className="flex flex-wrap gap-2">
+                      {member.skills.map((skill, skillIndex) => (
+                        <span
+                          key={skillIndex}
+                          className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-[#641f45]/5 text-[#641f45]"
+                        >
+                          {skill}
+                        </span>
+                      ))}
                     </div>
                   </div>
-                </div>
-                <div className="mt-6">
-                  <h3 className="text-lg font-medium text-gray-900">{member.name}</h3>
-                  <p className="text-sm text-[#641f45]">{member.role}</p>
                 </div>
               </motion.div>
             ))}
