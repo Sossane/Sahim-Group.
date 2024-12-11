@@ -20,7 +20,7 @@ const Solutions = () => {
       description: "Localisez facilement toutes les auto-écoles au Sénégal.",
       gradient: "from-[#8a2b5f] to-[#641f45]",
       buttonText: "Explorer la carte",
-      link: "https://trouver-auto-ecole-9uvo2nz77-ibrahima98s-projects.vercel.app/",
+      link: "https://trouver-auto-ecole.vercel.app/",
       image: "https://images.unsplash.com/photo-1508963493744-76fce69379c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
     }
   ];
