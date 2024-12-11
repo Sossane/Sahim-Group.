@@ -1,32 +1,34 @@
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Car, MapPin, Smartphone } from 'lucide-react';
-import React from 'react';
+import { Car, MapPin } from 'lucide-react';
 
 const Solutions = () => {
   const solutions = [
     {
       icon: <Car className="h-8 w-8 text-white" />,
       title: "Teggunou Yoon",
-      description: "Une solution innovante pour la sécurité routière et l'apprentissage du code de la route. Formez-vous efficacement grâce à notre plateforme interactive intégrant l'IA.",
-      gradient: "from-blue-600 to-cyan-500",
+      description: "Une solution innovante pour la sécurité routière et l'apprentissage du code de la route.",
+      gradient: "from-[#641f45] to-[#8a2b5f]",
       buttonText: "En savoir plus",
+      link: "/app-mobile",
       image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
     },
     {
       icon: <MapPin className="h-8 w-8 text-white" />,
       title: "Cartographie Auto-Écoles",
-      description: "Localisez facilement toutes les auto-écoles au Sénégal. Notre plateforme cartographique vous aide à trouver l'établissement idéal près de chez vous.",
-      gradient: "from-indigo-600 to-purple-600",
+      description: "Localisez facilement toutes les auto-écoles au Sénégal.",
+      gradient: "from-[#8a2b5f] to-[#641f45]",
       buttonText: "Explorer la carte",
+      link: "/",
       image: "https://images.unsplash.com/photo-1508963493744-76fce69379c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
     }
   ];
 
   return (
-    <div id="solutions" className="py-24 bg-gray-50">
+    <div id="solutions" className="py-24 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-extrabold sm:text-4xl bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+          <h2 className="text-3xl font-extrabold sm:text-4xl bg-gradient-to-r from-[#641f45] to-[#8a2b5f] bg-clip-text text-transparent">
             Nos Solutions
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
@@ -39,11 +41,14 @@ const Solutions = () => {
             {solutions.map((solution, index) => (
               <motion.div
                 key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
                 whileHover={{ y: -5 }}
-                className="overflow-hidden rounded-2xl shadow-xl bg-white transition-all duration-300"
+                className="group overflow-hidden rounded-2xl shadow-lg hover:shadow-xl bg-white transition-all duration-300"
               >
                 <div className="p-8">
-                  <div className={`inline-flex items-center justify-center p-3 bg-gradient-to-r ${solution.gradient} rounded-xl shadow-lg`}>
+                  <div className={`inline-flex items-center justify-center p-3 bg-gradient-to-r ${solution.gradient} rounded-xl shadow-lg transform group-hover:scale-110 transition-transform duration-300`}>
                     {solution.icon}
                   </div>
                   <h3 className="mt-6 text-2xl font-bold text-gray-900">
@@ -53,79 +58,26 @@ const Solutions = () => {
                     {solution.description}
                   </p>
                   <div className="mt-8">
-                    <motion.button
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      className={`inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-xl shadow-sm text-white bg-gradient-to-r ${solution.gradient} hover:shadow-lg transition-all duration-200`}
-                    >
-                      {solution.buttonText}
-                    </motion.button>
+                    <Link to={solution.link}>
+                      <motion.button
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className={`inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-xl shadow-sm text-white bg-gradient-to-r ${solution.gradient} hover:shadow-lg transition-all duration-200`}
+                      >
+                        {solution.buttonText}
+                      </motion.button>
+                    </Link>
                   </div>
                 </div>
-                <div 
-                  className="h-64 bg-cover bg-center transform hover:scale-105 transition-transform duration-500" 
-                  style={{backgroundImage: `url('${solution.image}')`}}
-                />
+                <div className="relative h-64">
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#641f45]/20 to-[#8a2b5f]/20 group-hover:opacity-0 transition-opacity duration-300"></div>
+                  <div 
+                    className="h-full bg-cover bg-center transform group-hover:scale-105 transition-transform duration-500" 
+                    style={{ backgroundImage: `url('${solution.image}')` }}
+                  />
+                </div>
               </motion.div>
             ))}
-          </div>
-
-          {/* Section Application Mobile */}
-          <div className="mt-32">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <motion.div 
-                initial={{ x: -50, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.8 }}
-                className="space-y-6"
-              >
-                <div className="inline-flex items-center justify-center p-3 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl shadow-lg">
-                  <Smartphone className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900">
-                  Application Mobile Teggunou Yoon
-                </h3>
-                <p className="text-gray-500 leading-relaxed">
-                  Accédez à toutes nos fonctionnalités directement depuis votre smartphone. Apprenez le code de la route, trouvez une auto-école et suivez votre progression où que vous soyez.
-                </p>
-                <ul className="space-y-4">
-                  {[
-                    "Apprentissage interactif du code de la route",
-                    "Suivi de progression personnalisé",
-                    "Localisation des auto-écoles en temps réel",
-                    "Tests et examens blancs"
-                  ].map((feature, index) => (
-                    <li key={index} className="flex items-center space-x-3">
-                      <div className="h-2 w-2 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600" />
-                      <span className="text-gray-600">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="pt-6 flex space-x-4">
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-xl shadow-sm text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:shadow-lg transition-all duration-200"
-                  >
-                    Télécharger l'app
-                  </motion.button>
-                </div>
-              </motion.div>
-
-              <motion.div 
-                initial={{ x: 50, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.8 }}
-                className="relative"
-              >
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-3xl transform rotate-6"></div>
-                <img
-                  src=""
-                  alt="Interface mobile Teggunou Yoon"
-                  className="relative z-10 rounded-3xl shadow-xl w-full max-w-md mx-auto transform hover:scale-105 transition-transform duration-500 object-cover h-[500px]"
-                />
-              </motion.div>
-            </div>
           </div>
         </div>
       </div>
