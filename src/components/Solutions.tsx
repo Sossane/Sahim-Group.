@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { Car, MapPin } from 'lucide-react';
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const Solutions = () => {
   const solutions = [
@@ -59,7 +58,11 @@ const Solutions = () => {
                     {solution.description}
                   </p>
                   <div className="mt-8">
-                    <Link to={solution.link}>
+                    <a 
+                      href="https://trouver-auto-ecole.vercel.app/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
                       <motion.button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
@@ -67,7 +70,7 @@ const Solutions = () => {
                       >
                         {solution.buttonText}
                       </motion.button>
-                    </Link>
+                    </a>
                   </div>
                 </div>
                 <div className="relative h-64">
