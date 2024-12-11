@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
-import { Smartphone, Building2 } from 'lucide-react';
-import Navbar from './Navbar';
+import { Building2, Smartphone } from 'lucide-react';
+import React from 'react';
 import Footer from './Footer';
+import Navbar from './Navbar';
 
 const AppMobile = () => {
   return (
