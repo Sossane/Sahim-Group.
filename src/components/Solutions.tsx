@@ -6,11 +6,11 @@ const Solutions = () => {
   const solutions = [
     {
       icon: <Car className="h-8 w-8 text-white" />,
-      title: "Teggunou Yoon",
+      title: "Tegginu Yoon",
       description: "Une solution innovante pour la sécurité routière et l'apprentissage du code de la route.",
       gradient: "from-[#82368C] to-[#82368C]",
       buttonText: "En savoir plus",
-      link: "/app-mobile",
+      link: "",
       image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
     },
     {
@@ -59,7 +59,7 @@ const Solutions = () => {
                   </p>
                   <div className="mt-8">
                     <a 
-                      href="https://trouver-auto-ecole.vercel.app/" 
+                      href="" 
                       target="_blank" 
                       rel="noopener noreferrer"
                     >
