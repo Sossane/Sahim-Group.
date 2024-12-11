@@ -1,10 +1,10 @@
 import React from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
 import About from './components/About';
-import Team from './components/Team';
-import Solutions from './components/Solutions';
 import Footer from './components/Footer';
+import Hero from './components/Hero';
+import Navbar from './components/Navbar';
+import Solutions from './components/Solutions';
+import Team from './components/Team';
 
 function App() {
   return (
@@ -12,8 +12,9 @@ function App() {
       <Navbar />
       <Hero />
       <About />
-      <Team />
       <Solutions />
+      <Team />
+      
       <Footer />
     </div>
   );
