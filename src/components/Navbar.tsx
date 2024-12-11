@@ -42,7 +42,7 @@ const Navbar = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-gray-600 hover:text-[#641f45] transition-colors duration-200 font-medium"
+                className="text-gray-600 hover:text-[#1a5f7a] transition-colors duration-200 font-medium"
               >
                 {item.name}
               </a>
@@ -50,7 +50,7 @@ const Navbar = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-4 py-2 rounded-lg bg-gradient-to-r from-[#641f45] to-[#8a2b5f] text-white font-medium hover:shadow-lg transition-all duration-200"
+              className="px-4 py-2 rounded-lg bg-gradient-to-r from-[#1a5f7a] to-[#0c2c3e] text-white font-medium hover:shadow-lg transition-all duration-200"
             >
               Commencer
             </motion.button>
@@ -90,7 +90,7 @@ const Navbar = () => {
               ))}
               <motion.button
                 whileTap={{ scale: 0.95 }}
-                className="w-full mt-4 px-4 py-2 rounded-lg bg-gradient-to-r from-[#641f45] to-[#8a2b5f] text-white font-medium hover:shadow-lg transition-all duration-200"
+                className="w-full mt-4 px-4 py-2 rounded-lg bg-gradient-to-r from-[#1a5f7a] to-[#0c2c3e] text-white font-medium hover:shadow-lg transition-all duration-200"
               >
                 Commencer
               </motion.button>
