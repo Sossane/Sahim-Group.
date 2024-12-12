@@ -75,7 +75,7 @@ const Solutions = () => {
                         </motion.button>
                       </a>
                     ) : (
-                      <Link to={solution.link}>
+                      <Link to={solution.link} onClick={() => window.scrollTo(0, 0)}>
                         <motion.button
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
