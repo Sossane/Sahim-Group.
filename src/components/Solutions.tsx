@@ -12,7 +12,11 @@ const Solutions = () => {
       buttonText: "En savoir plus",
       link: "/app-mobile",
       isExternal: false,
+<<<<<<< HEAD
       image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+=======
+      image: "/path/to/image.jpg"
+>>>>>>> ab25ee40a2e60490d58e89a3b7ba9a7a2aaa4f11
     },
     {
       icon: <MapPin className="h-8 w-8 text-white" />,
