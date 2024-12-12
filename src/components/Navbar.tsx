@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { AnimatePresence, motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -47,13 +47,6 @@ const Navbar = () => {
                 {item.name}
               </a>
             ))}
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-4 py-2 rounded-lg bg-gradient-to-r from-[#1a5f7a] to-[#0c2c3e] text-white font-medium hover:shadow-lg transition-all duration-200"
-            >
-              Commencer
-            </motion.button>
           </div>
 
           {/* Mobile menu button */}
@@ -88,12 +81,6 @@ const Navbar = () => {
                   {item.name}
                 </a>
               ))}
-              <motion.button
-                whileTap={{ scale: 0.95 }}
-                className="w-full mt-4 px-4 py-2 rounded-lg bg-gradient-to-r from-[#1a5f7a] to-[#0c2c3e] text-white font-medium hover:shadow-lg transition-all duration-200"
-              >
-                Commencer
-              </motion.button>
             </div>
           </motion.div>
         )}

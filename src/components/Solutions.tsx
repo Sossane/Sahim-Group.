@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { Car, MapPin } from 'lucide-react';
-import React from 'react';
 
 const Solutions = () => {
   const solutions = [
@@ -59,9 +58,9 @@ const Solutions = () => {
                   </p>
                   <div className="mt-8">
                     <a 
-                      href="" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
+                      href={solution.link} 
+                      target={solution.link ? "_blank" : undefined} 
+                      rel={solution.link ? "noopener noreferrer" : undefined}
                     >
                       <motion.button
                         whileHover={{ scale: 1.05 }}

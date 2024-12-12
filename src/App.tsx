@@ -1,12 +1,11 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import About from './components/About';
+import AppMobile from './components/AppMobile';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
 import Navbar from './components/Navbar';
 import Solutions from './components/Solutions';
 import Team from './components/Team';
-import AppMobile from './components/AppMobile';
 
 function App() {
   return (
