@@ -1,156 +1,181 @@
 import { motion } from 'framer-motion';
-import { Building2, Smartphone } from 'lucide-react';
+import { Building2, Check } from 'lucide-react';
 import React from 'react';
 import Footer from './Footer';
 import Navbar from './Navbar';
 
 const AppMobile = () => {
+  const appFeatures = [
+    "Apprentissage en wolof et en français",
+    "Cours disponibles en audio et texte",
+    "Suivi des progrès personnalisé",
+    "Exercices pratiques interactifs"
+  ];
+
+  const platformFeatures = [
+    "Gestion complète des apprenants",
+    "Planning des cours interactif",
+    "Suivi des paiements en temps réel",
+    "Tableau de bord analytique"
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
       
       {/* Section Plateforme de Gestion */}
-      <div className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="text-3xl font-extrabold sm:text-4xl bg-gradient-to-r from-[#82368C] to-[#82368C] bg-clip-text text-transparent">
-              Plateforme de Gestion des Auto-Écoles
-            </h2>
-            <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
-              Une solution complète pour moderniser et optimiser la gestion de votre auto-école
-            </p>
-          </div>
-
-          <div className="mt-20">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-              <motion.div 
-                initial={{ x: -50, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.8 }}
-                className="space-y-6"
-              >
-                <div className="inline-flex items-center justify-center p-3 bg-gradient-to-r from-[#82368C] to-[#82368C] rounded-xl shadow-lg">
-                  <Building2 className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900">
-                  Gérez votre auto-école efficacement
-                </h3>
-                <p className="text-gray-500 leading-relaxed">
-                  Notre plateforme vous offre tous les outils nécessaires pour digitaliser et optimiser la gestion de votre auto-école, du suivi des élèves à la planification des cours.
+      <section className="py-24 bg-gradient-to-b from-gray-50 to-white">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Texte et Features */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              className="space-y-8"
+            >
+              <div>
+                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                  Plateforme de Gestion{' '}
+                  <span className="bg-gradient-to-r from-[#82368C] to-[#82368C] bg-clip-text text-transparent">
+                    Auto-Écoles
+                  </span>
+                </h2>
+                <p className="text-xl text-gray-600 leading-relaxed mb-8">
+                  Notre plateforme offre une solution complète pour moderniser et optimiser la gestion de votre auto-école, avec des outils adaptés à vos besoins.
                 </p>
-                <ul className="space-y-4">
-                  {[
-                    "Gestion complète des apprenants et des inscriptions",
-                    "Planning des cours",
-                    "Suivi des paiements et facturation",
-                    "Tableau de bord analytique",
-                    "Interface intuitive et moderne"
-                  ].map((feature, index) => (
-                    <li key={index} className="flex items-center space-x-3">
-                      <div className="h-2 w-2 rounded-full bg-gradient-to-r from-[#82368C] to-[#82368C]" />
-                      <span className="text-gray-600">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="pt-4">
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-xl shadow-sm text-white bg-gradient-to-r from-[#82368C] to-[#82368C] hover:shadow-lg transition-all duration-200"
-                  >
-                    Demander une démo
-                  </motion.button>
-                </div>
-              </motion.div>
+              </div>
 
-              <motion.div 
-                initial={{ x: 50, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.8 }}
-                className="relative mt-8 lg:mt-0"
+              <div className="space-y-4">
+                {platformFeatures.map((feature, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="flex items-center space-x-3"
+                  >
+                    <Check className="h-6 w-6 text-[#82368C]" />
+                    <span className="text-gray-600">{feature}</span>
+                  </motion.div>
+                ))}
+              </div>
+
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-6 py-3 bg-gradient-to-r from-[#82368C] to-[#82368C] text-white rounded-lg hover:opacity-90 transition-all duration-300 mt-8"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-[#82368C] to-[#82368C] rounded-3xl transform rotate-6"></div>
-                <img
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-                  alt="Interface de la plateforme de gestion"
-                  className="relative z-10 rounded-3xl shadow-xl w-full max-w-sm mx-auto transform hover:scale-105 transition-transform duration-500 object-cover h-[400px]"
-                />
-              </motion.div>
-            </div>
+                Demander une démo
+              </motion.button>
+            </motion.div>
+
+            {/* Image de la Plateforme */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="relative"
+            >
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-[#82368C] to-[#82368C] rounded-3xl transform rotate-12 opacity-10"></div>
+                <div className="relative z-10 rounded-3xl overflow-hidden shadow-xl">
+                  <img
+                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                    alt="Interface de la plateforme"
+                    className="w-full h-[500px] object-cover transform hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-white to-transparent"></div>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Section Application Mobile */}
-      <div className="py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="text-3xl font-extrabold sm:text-4xl bg-gradient-to-r from-[#82368C] to-[#82368C] bg-clip-text text-transparent">
-              Application Mobile Teggunou Yoon
-            </h2>
-            <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
-              Votre compagnon d'apprentissage du code de la route
-            </p>
-          </div>
-
-          <div className="mt-20">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-              <motion.div 
-                initial={{ x: -50, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.8 }}
-                className="space-y-6"
-              >
-                <div className="inline-flex items-center justify-center p-3 bg-gradient-to-r from-[#82368C] to-[#82368C] rounded-xl shadow-lg">
-                  <Smartphone className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900">
-                  Fonctionnalités Principales
-                </h3>
-                <p className="text-gray-500 leading-relaxed">
-                  Accédez à toutes nos fonctionnalités directement depuis votre smartphone. Apprenez le code de la route, trouvez une auto-école et suivez votre progression où que vous soyez.
+      <section className="py-24 bg-gradient-to-b from-gray-50 to-white">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Texte et Features */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              className="space-y-8"
+            >
+              <div>
+                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                  Application Mobile{' '}
+                  <span className="bg-gradient-to-r from-[#82368C] to-[#82368C] bg-clip-text text-transparent">
+                    Accessible à Tous
+                  </span>
+                </h2>
+                <p className="text-xl text-gray-600 leading-relaxed mb-8">
+                  Notre application propose un apprentissage innovant du code de la route en langues locales. Écoutez et lisez les cours en wolof ou en français, pour une compréhension optimale adaptée à tous.
                 </p>
-                <ul className="space-y-4">
-                  {[
-                    "Apprentissage interactif du code de la route",
-                    "Suivi de progression personnalisé",
-                    "Localisation des auto-écoles en temps réel",
-                    "Tests et examens blancs"
-                  ].map((feature, index) => (
-                    <li key={index} className="flex items-center space-x-3">
-                      <div className="h-2 w-2 rounded-full bg-gradient-to-r from-[#82368C] to-[#82368C]" />
-                      <span className="text-gray-600">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="pt-4">
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-xl shadow-sm text-white bg-gradient-to-r from-[#82368C] to-[#82368C] hover:shadow-lg transition-all duration-200"
-                  >
-                    Télécharger l'app
-                  </motion.button>
-                </div>
-              </motion.div>
+              </div>
 
-              <motion.div 
-                initial={{ x: 50, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.8 }}
-                className="relative mt-8 lg:mt-0"
+              <div className="space-y-4">
+                {appFeatures.map((feature, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="flex items-center space-x-3"
+                  >
+                    <Check className="h-6 w-6 text-[#82368C]" />
+                    <span className="text-gray-600">{feature}</span>
+                  </motion.div>
+                ))}
+              </div>
+
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-6 py-3 bg-gradient-to-r from-[#82368C] to-[#82368C] text-white rounded-lg hover:opacity-90 transition-all duration-300 mt-8"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-[#82368C] to-[#82368C] rounded-3xl transform rotate-6"></div>
-                <img
-                  src=""
-                  alt="Interface mobile Teggunou Yoon"
-                  className="relative z-10 rounded-3xl shadow-xl w-full max-w-sm mx-auto transform hover:scale-105 transition-transform duration-500 object-cover h-[400px]"
-                />
-              </motion.div>
-            </div>
+                Télécharger l'application
+              </motion.button>
+            </motion.div>
+
+            {/* Image de l'App avec Vidéo */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="relative"
+            >
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-[#82368C] to-[#82368C] rounded-3xl transform rotate-12 opacity-10"></div>
+                <div className="relative z-10 mx-auto max-w-[300px]">
+                  <div className="relative">
+                    <img
+                      src="https://www.pngall.com/wp-content/uploads/5/iPhone-12-PNG-Image-File.png"
+                      alt="Cadre du téléphone"
+                      className="w-full"
+                    />
+                    <div className="absolute top-[6%] left-[5%] right-[5%] bottom-[6%] rounded-[28px] overflow-hidden">
+                      <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-full h-full object-cover"
+                      >
+                        <source src="https://cdn.dribbble.com/users/1299339/screenshots/14693431/media/0acf60804e4c4a6917baa28c809d099c.mp4" type="video/mp4" />
+                        Votre navigateur ne supporte pas la lecture de vidéos.
+                      </video>
+                    </div>
+                  </div>
+                  <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-white to-transparent z-20"></div>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
-      </div>
+      </section>
       <Footer />
     </div>
   );

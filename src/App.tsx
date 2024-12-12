@@ -1,7 +1,6 @@
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import About from './components/About';
 import AppMobile from './components/AppMobile';
-import AppMobileSection from './components/AppMobileSection';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
 import Navbar from './components/Navbar';
@@ -18,7 +17,6 @@ function App() {
             <Hero />
             <About />
             <Solutions />
-            <AppMobileSection />
             <Team />
             <Footer />
           </div>

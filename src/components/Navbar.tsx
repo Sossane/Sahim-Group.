@@ -55,7 +55,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex-shrink-0">
-            <span className="text-2xl font-bold bg-gradient-to-r from-[#641f45] to-[#8a2b5f] bg-clip-text text-transparent">
+            <span className="text-2xl font-bold bg-gradient-to-r from-[#641f45] to-[#82368C] bg-clip-text text-transparent">
               Sahim Group
             </span>
           </Link>
