@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Car, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Solutions = () => {
   const solutions = [
@@ -9,8 +10,8 @@ const Solutions = () => {
       description: "Une solution innovante pour la sécurité routière et l'apprentissage du code de la route.",
       gradient: "from-[#82368C] to-[#82368C]",
       buttonText: "En savoir plus",
-      link: "",
-      image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+      link: "/app-mobile",
+      isExternal: false
     },
     {
       icon: <MapPin className="h-8 w-8 text-white" />,
@@ -19,7 +20,7 @@ const Solutions = () => {
       gradient: "from-[#82368C] to-[#82368C]",
       buttonText: "Explorer la carte",
       link: "https://trouver-auto-ecole.vercel.app/",
-      image: "https://images.unsplash.com/photo-1508963493744-76fce69379c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+      isExternal: true
     }
   ];
 
@@ -57,19 +58,31 @@ const Solutions = () => {
                     {solution.description}
                   </p>
                   <div className="mt-8">
-                    <a 
-                      href={solution.link} 
-                      target={solution.link ? "_blank" : undefined} 
-                      rel={solution.link ? "noopener noreferrer" : undefined}
-                    >
-                      <motion.button
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className={`inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-xl shadow-sm text-white bg-gradient-to-r ${solution.gradient} hover:shadow-lg transition-all duration-200`}
+                    {solution.isExternal ? (
+                      <a 
+                        href={solution.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
-                        {solution.buttonText}
-                      </motion.button>
-                    </a>
+                        <motion.button
+                          whileHover={{ scale: 1.05 }}
+                          whileTap={{ scale: 0.95 }}
+                          className={`inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-xl shadow-sm text-white bg-gradient-to-r ${solution.gradient} hover:shadow-lg transition-all duration-200`}
+                        >
+                          {solution.buttonText}
+                        </motion.button>
+                      </a>
+                    ) : (
+                      <Link to={solution.link}>
+                        <motion.button
+                          whileHover={{ scale: 1.05 }}
+                          whileTap={{ scale: 0.95 }}
+                          className={`inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-xl shadow-sm text-white bg-gradient-to-r ${solution.gradient} hover:shadow-lg transition-all duration-200`}
+                        >
+                          {solution.buttonText}
+                        </motion.button>
+                      </Link>
+                    )}
                   </div>
                 </div>
                 <div className="relative h-64">
