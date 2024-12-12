@@ -1,10 +1,14 @@
 import { motion } from 'framer-motion';
 import { Building2, Check } from 'lucide-react';
-import React from 'react';
+import React, { useEffect } from 'react';
 import Footer from './Footer';
 import Navbar from './Navbar';
 
 const AppMobile = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const appFeatures = [
     "Apprentissage en wolof et en français",
     "Cours disponibles en audio et texte",
