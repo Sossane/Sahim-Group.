@@ -54,7 +54,11 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex-shrink-0">
+          <Link 
+            to="/" 
+            className="flex-shrink-0"
+            onClick={() => window.scrollTo(0, 0)}
+          >
             <span className="text-2xl font-bold bg-gradient-to-r from-[#641f45] to-[#82368C] bg-clip-text text-transparent">
               Sahim Group
             </span>

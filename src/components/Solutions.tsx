@@ -12,17 +12,17 @@ const Solutions = () => {
       buttonText: "En savoir plus",
       link: "/app-mobile",
       isExternal: false,
-      image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+      image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
     },
     {
       icon: <MapPin className="h-8 w-8 text-white" />,
       title: "Cartographie Auto-Écoles",
-      description: "Localisez facilement toutes les auto-écoles au Sénégal.",
+      description: "Comparez, choisissez et inscrivez-vous dans les meilleures auto-écoles au Sénégal. Tout simplement.",
       gradient: "from-[#82368C] to-[#82368C]",
       buttonText: "Explorer la carte",
       link: "https://trouver-auto-ecole.vercel.app/",
       isExternal: true,
-      image: "https://images.unsplash.com/photo-1508963493744-76fce69379c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+      image: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
     }
   ];
 
@@ -49,6 +49,14 @@ const Solutions = () => {
                 whileHover={{ y: -5 }}
                 className="group overflow-hidden rounded-2xl shadow-lg hover:shadow-xl bg-white transition-all duration-300"
               >
+                <div className="relative h-64">
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#82368C]/20 to-[#82368C]/20 group-hover:opacity-0 transition-opacity duration-300 z-10"></div>
+                  <img 
+                    src={solution.image}
+                    alt={solution.title}
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
                 <div className="p-8">
                   <div className={`inline-flex items-center justify-center p-3 bg-gradient-to-r ${solution.gradient} rounded-xl shadow-lg transform group-hover:scale-110 transition-transform duration-300`}>
                     {solution.icon}
@@ -86,13 +94,6 @@ const Solutions = () => {
                       </Link>
                     )}
                   </div>
-                </div>
-                <div className="relative h-64">
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#82368C]/20 to-[#82368C]/20 group-hover:opacity-0 transition-opacity duration-300"></div>
-                  <div 
-                    className="h-full bg-cover bg-center transform group-hover:scale-105 transition-transform duration-500" 
-                    style={{ backgroundImage: `url('${solution.image}')` }}
-                  />
                 </div>
               </motion.div>
             ))}

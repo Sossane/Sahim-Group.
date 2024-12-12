@@ -16,14 +16,14 @@ const Footer = () => {
     {
       icon: <Mail />,
       title: "Email",
-      content: "contact@sahimgroup.com",
-      href: "mailto:contact@sahimgroup.com"
+      content: "tegguinuyoon@gmail.com",
+      href: "mailto:tegguinuyoon@gmail.com"
     },
     {
       icon: <Phone />,
       title: "Téléphone",
-      content: "+221 77 777 77 77",
-      href: "tel:+221777777777"
+      content: "+221 78 520 40 78",
+      href: "tel:+221785204078"
     },
     {
       icon: <MapPin />,
@@ -37,17 +37,17 @@ const Footer = () => {
     {
       icon: <Linkedin />,
       name: 'LinkedIn',
-      href: 'https://linkedin.com/company/sahimgroup'
+      href: '#'
     },
     {
       icon: <Twitter />,
       name: 'Twitter',
-      href: 'https://twitter.com/sahimgroup'
+      href: '#'
     },
     {
       icon: <Instagram />,
       name: 'Instagram',
-      href: 'https://instagram.com/sahimgroup'
+      href: '#'
     }
   ];
 
@@ -65,18 +65,14 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               {socialMedia.map((social, index) => (
-                <a
+                <div
                   key={index}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="p-2.5 bg-[#82368C]/10 rounded-lg hover:bg-[#82368C] group transition-all duration-300"
-                  aria-label={social.name}
                 >
                   {React.cloneElement(social.icon, { 
                     className: "h-5 w-5 text-[#82368C] group-hover:text-white transition-colors" 
                   })}
-                </a>
+                </div>
               ))}
             </div>
           </div>
