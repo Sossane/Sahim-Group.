@@ -1,0 +1,31 @@
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import About from './components/About';
+import Footer from './components/Footer';
+import Hero from './components/Hero';
+import Navbar from './components/Navbar';
+import Solutions from './components/Solutions';
+import Team from './components/Team';
+import AppMobile from './components/AppMobile';
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={
+          <div className="min-h-screen bg-white">
+            <Navbar />
+            <Hero />
+            <About />
+            <Solutions />
+            <Team />
+            <Footer />
+          </div>
+        } />
+        <Route path="/app-mobile" element={<AppMobile />} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;
