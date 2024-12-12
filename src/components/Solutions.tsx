@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { Car, MapPin } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 const Solutions = () => {
   const solutions = [
@@ -8,24 +7,18 @@ const Solutions = () => {
       icon: <Car className="h-8 w-8 text-white" />,
       title: "Tegginu Yoon",
       description: "Une solution innovante pour la sécurité routière et l'apprentissage du code de la route.",
-      gradient: "from-[#641f45] to-[#8a2b5f]",
+      gradient: "from-[#82368C] to-[#82368C]",
       buttonText: "En savoir plus",
-      link: "/app-mobile",
-      isExternal: false,
-<<<<<<< HEAD
+      link: "",
       image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-=======
-      image: "/path/to/image.jpg"
->>>>>>> ab25ee40a2e60490d58e89a3b7ba9a7a2aaa4f11
     },
     {
       icon: <MapPin className="h-8 w-8 text-white" />,
       title: "Cartographie Auto-Écoles",
       description: "Localisez facilement toutes les auto-écoles au Sénégal.",
-      gradient: "from-[#641f45] to-[#8a2b5f]",
+      gradient: "from-[#82368C] to-[#82368C]",
       buttonText: "Explorer la carte",
       link: "https://trouver-auto-ecole.vercel.app/",
-      isExternal: true,
       image: "https://images.unsplash.com/photo-1508963493744-76fce69379c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
     }
   ];
@@ -34,7 +27,7 @@ const Solutions = () => {
     <div id="solutions" className="py-24 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-extrabold sm:text-4xl bg-gradient-to-r from-[#641f45] to-[#8a2b5f] bg-clip-text text-transparent">
+          <h2 className="text-3xl font-extrabold sm:text-4xl bg-gradient-to-r from-[#82368C] to-[#82368C] bg-clip-text text-transparent">
             Nos Solutions
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
@@ -64,35 +57,23 @@ const Solutions = () => {
                     {solution.description}
                   </p>
                   <div className="mt-8">
-                    {solution.isExternal ? (
-                      <a 
-                        href={solution.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                    <a 
+                      href="" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      <motion.button
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className={`inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-xl shadow-sm text-white bg-gradient-to-r ${solution.gradient} hover:shadow-lg transition-all duration-200`}
                       >
-                        <motion.button
-                          whileHover={{ scale: 1.05 }}
-                          whileTap={{ scale: 0.95 }}
-                          className={`inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-xl shadow-sm text-white bg-gradient-to-r ${solution.gradient} hover:shadow-lg transition-all duration-200`}
-                        >
-                          {solution.buttonText}
-                        </motion.button>
-                      </a>
-                    ) : (
-                      <Link to={solution.link}>
-                        <motion.button
-                          whileHover={{ scale: 1.05 }}
-                          whileTap={{ scale: 0.95 }}
-                          className={`inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-xl shadow-sm text-white bg-gradient-to-r ${solution.gradient} hover:shadow-lg transition-all duration-200`}
-                        >
-                          {solution.buttonText}
-                        </motion.button>
-                      </Link>
-                    )}
+                        {solution.buttonText}
+                      </motion.button>
+                    </a>
                   </div>
                 </div>
                 <div className="relative h-64">
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#641f45]/20 to-[#8a2b5f]/20 group-hover:opacity-0 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#82368C]/20 to-[#82368C]/20 group-hover:opacity-0 transition-opacity duration-300"></div>
                   <div 
                     className="h-full bg-cover bg-center transform group-hover:scale-105 transition-transform duration-500" 
                     style={{ backgroundImage: `url('${solution.image}')` }}
