@@ -11,7 +11,8 @@ const Solutions = () => {
       gradient: "from-[#82368C] to-[#82368C]",
       buttonText: "En savoir plus",
       link: "/app-mobile",
-      isExternal: false
+      isExternal: false,
+      image: "/path/to/image.jpg"
     },
     {
       icon: <MapPin className="h-8 w-8 text-white" />,
