@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import React from 'react';
 
 const Team = () => {
   const teamMembers = [
@@ -29,7 +28,8 @@ const Team = () => {
       image: new URL('../assets/images/imam.jpeg', import.meta.url).href,
       skills: [
         "Développeur IA",
-        "Ingénieur en S.I Répartis"
+        "Ingénieur en S.I Répartis",
+        "Développeur fullstack"
       ]
     },
     {
